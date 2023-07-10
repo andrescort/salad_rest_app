@@ -10,7 +10,6 @@ def init_app(conf):
     app.config.from_object(conf)
     app.register_blueprint(global_scope, url_prefix="/")
     app.register_blueprint(api_scope, url_prefix="/api")
-
     return app
 
 #app.register_blueprint(errors_scope, url_prefix="/")

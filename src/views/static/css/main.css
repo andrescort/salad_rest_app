@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  main {
+    margin: 15px 0 0 15px;
+  }
+  main header {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  main header a {
+    margin-left: 15px;
+  }
+  main header div {
+    margin-right: 15px;
+  }
+  main .offers_container .shadow-text::after {
+    content: "";
+    width: 60px;
+    height: 8px;
+    position: fixed;
+    top: 79px;
+    left: 97px;
+    z-index: -1;
+    background-color: #b4dc62;
+  }
+  main .menu_container .shadow-text::after {
+    content: "";
+    width: 70px;
+    height: 8px;
+    position: fixed;
+    top: 145px;
+    left: 117px;
+    z-index: -1;
+    background-color: #b4dc62;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
