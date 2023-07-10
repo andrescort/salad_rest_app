@@ -1,0 +1,16 @@
+@use 'modules/globals'
+@use 'modules/headers'
+@use 'modules/offers'
+@use 'modules/menu'
+
+@media only screen and (max-width: 768px) 
+  /* For mobile phones: */
+  main
+    margin: 15px 0 0 15px
+
+    @include headers.Headers
+    @include offers.Offers
+    @include menu.Menu
+
+
+

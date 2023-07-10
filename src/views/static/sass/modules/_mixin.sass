@@ -1,0 +1,23 @@
+@use 'vars'
+
+@mixin position-element($heightprops: 100%, $widthprops: 100%, $justifyprops: center, $alignprops: center)
+    height: $heightprops
+    width: $widthprops
+    display: flex
+    justify-content: $justifyprops
+    align-content: $alignprops
+
+
+@mixin witter-shadow($widthprops, $topprops, $leftprops)
+    &::after
+      content: ""
+      width: $widthprops
+      height: 8px
+      position: fixed
+      top: $topprops
+      left: $leftprops
+      z-index: -1
+      background-color: vars.$activebtn
+    
+
+    // text-shadow: -1px 9px 7px vars.$activebtn
