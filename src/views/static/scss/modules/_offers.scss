@@ -1,0 +1,46 @@
+@use 'mixin';
+
+@mixin Offers
+{
+    .offers_container
+    {
+        @include mixin.container($heightprops: 30vh, $justifyprops: flex-start);
+      
+        h2
+        {
+            .shadow-text
+            {
+                @include mixin.witter-shadow($widthprops: 70px, $topprops: 5%);
+            }
+        }
+
+        .offers_product
+        {
+            margin-top: 2em;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+        
+            .info
+            {
+                padding: 15px 20px 15px 15px;
+                width: 80%;
+                position: relative;
+                box-shadow: 0px 0px 10px 1px #fff;
+                border-radius: 20px;
+
+                img
+                {
+                    width: 150px;
+                    height: 150px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(15%, -50%);
+                    background-color: red;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

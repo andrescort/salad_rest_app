@@ -1,0 +1,36 @@
+@use 'vars';
+
+@mixin position-element($justifyprops: center)
+{
+    width: 100%;
+    display: flex;
+    justify-content: $justifyprops;
+    align-content: center;
+}
+
+@mixin container($heightprops, $justifyprops: center)
+{
+    height: $heightprops;
+    @include position-element($justifyprops);
+    position: relative;
+    flex-direction: column;
+}
+
+
+@mixin witter-shadow($widthprops, $topprops)
+{
+    position: relative;
+    &::after
+    {
+        content: "";
+        width: $widthprops;
+        height: 8px;
+        position: absolute;
+        top: $topprops;
+        transform: translate(-90%, 150%);
+        z-index: -1;
+        background-color: vars.$activebtn;
+  }
+}
+
+

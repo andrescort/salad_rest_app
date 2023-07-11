@@ -1,0 +1,11 @@
+@use 'mixin';
+
+@mixin Navbar
+{
+    nav
+    {
+        position: absolute;
+        @include mixin.position-element($justifyprops: space-evenly);
+        bottom: 0;
+    }
+}

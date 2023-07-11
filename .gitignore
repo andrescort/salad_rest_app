@@ -44,6 +44,7 @@ instance/
 .webassets-cache
 
 # Sphinx documentation
+docs/
 docs/_build/
 
 # PyBuilder
@@ -91,4 +92,3 @@ cython_debug/
 
 # Drafts
 src/views/static/css
-

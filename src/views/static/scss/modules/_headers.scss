@@ -1,0 +1,22 @@
+@use 'mixin';
+
+@mixin Headers
+{
+  header
+  {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 10vh;
+    @include mixin.position-element($justifyprops: space-between);
+
+    a
+    {
+      margin-left: 15px;
+    }
+
+    div
+    {
+      margin-right: 15px;
+    }
+  }
+}
