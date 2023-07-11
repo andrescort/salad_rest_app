@@ -91,4 +91,4 @@ dmypy.json
 cython_debug/
 
 # Drafts
-src/views/static/css
+src/views/static/css/*
