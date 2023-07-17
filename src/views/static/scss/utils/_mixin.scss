@@ -1,0 +1,14 @@
+@mixin position_element(
+    $heightprop,
+    $widthprop: 100%,
+    $positionprop: relative,
+    $justifyprop: center,
+    $alignprop: center)
+{
+    height: $heightprop;
+    width: $widthprop;
+    position: $positionprop;
+    display: flex;
+    justify-content: $justifyprop;
+    align-items: $alignprop;
+}

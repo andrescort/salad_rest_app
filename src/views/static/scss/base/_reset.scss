@@ -1,0 +1,46 @@
+// Reset general
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Evitar el desbordamiento horizontal
+body {
+  overflow-x: hidden;
+}
+
+// Estilos básicos para la lista
+ul,
+ol {
+  list-style: none;
+}
+
+// Ajustar estilos de enlace predeterminados
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Hacer que los elementos de bloque se comporten como cajas
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+// Ajustar el tamaño máximo de la imagen
+img {
+  max-width: 100%;
+  height: auto;
+}
+

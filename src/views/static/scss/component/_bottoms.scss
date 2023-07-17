@@ -1,0 +1,22 @@
+/*
+ * Buttons styles
+ */
+
+
+@use '../base/variables' as vars;
+@use '../utils/mixin';
+
+
+// Navbar
+.active
+{
+    @include mixin.position_element($heightprop: 70px !important, $widthprop: 70px !important);
+    background-color: vars.$btn-active-color;
+    border-radius: 50%;
+    color: vars.$font-active-color;
+    
+    i
+    {
+        font-size: 1.8em !important;
+    }
+}

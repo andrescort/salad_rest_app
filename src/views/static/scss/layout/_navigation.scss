@@ -1,0 +1,66 @@
+@use '../base/variables' as vars;
+@use '../utils/mixin';
+@use '../utils/animations';
+@use '../component/indicator';
+
+.navigation
+{
+    @include mixin.position_element(
+       $heightprop: 100%,
+       $widthprop: 100%,
+    );
+    background-color: vars.$btn-inactive-color;
+
+    ul
+    {
+        display: flex;
+    }
+
+    &__list
+    {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        z-index: 1;
+
+        a
+        {
+            @include mixin.position_element(
+                $heightprop:100%, $widthprop: 100%,
+            );
+            flex-direction: column;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+
+    &__icon
+    {
+        position: relative;
+        line-height: 75px;
+        font-size: 1em;
+        text-align: center;
+        transition: 0.5s;
+
+    }
+
+    &__text
+    {
+        position: absolute;
+        font-weight: 400;
+        font-size: 0.75em;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .active a .navigation__icon
+    {
+        transform: translateY(-50px);
+    }
+
+    .active a .navigation__text
+    {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}

@@ -1,20 +1,22 @@
 from flask import Blueprint, render_template
 
-global_scope = Blueprint("views", __name__)
+Home = Blueprint("views", __name__)
 
 nav = [
-    {"name": "Grupos", "url": "/api/groups"},
-    {"name": "Contactos", "url": "/api/contacts"},
+    {"name": "Home", "icon": "home", "url": "/"},
+    {"name": "Menu", "icon": "book", "url": "/Menu"},
+    {"name": "Order", "icon": "restaurant", "url": "/order"},
+    {"name": "Likes", "icon": "heart", "url": "/likes"},
+    {"name": "User", "icon": "person", "url": "/User"},
 ]
 
 
-@global_scope.route("/", methods=['GET'])
+@Home.route("/", methods=['GET'])
 def home():
-    """Landing page route."""
+    """Landing page Home."""
 
     parameters = {"title": "Salad",
-                  "NameLogo": "Salad app",
-                  "description": "Web programming practice with Flask, it's an app that displays information"
+                  "NameLogo": "Salad app"
                   }
 
     return render_template("home.html.jinja", nav=nav, **parameters)

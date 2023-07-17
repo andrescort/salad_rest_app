@@ -1,7 +1,17 @@
 <nav>
-  <a>Home</a>
-  <a>Menu</a>
-  <a>Order</a>
-  <a>Likes</a>
-  <a>User</a>
+  <div class="navigation">
+    <ul>
+      {% for i in nav %}
+      <li class="navigation__list">
+        <a href="#">
+          <span class="navigation__icon">
+          <ion-icon name="{{i.icon}}-outline"></ion-icon>
+          </span>
+          <span class="navigation__text">{{ i.name }}</span>
+        </a>
+      </li>
+      {% endfor%}
+      <span class="indicator"></span>
+    </ul>
+  </div>
 </nav>

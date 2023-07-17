@@ -1,0 +1,8 @@
+@use '../base/variables' as vars;
+@use '../layout/navigation';
+
+main
+{
+    background-color: vars.$bg-secondary-color;
+    color: #fff;
+}

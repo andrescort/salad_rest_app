@@ -1,10 +1,10 @@
-from flask import Blueprint, render_template
+from flask import Blueprint
 
-api_scope = Blueprint("api", __name__)
+api = Blueprint("api", __name__)
 
 
-@api_scope.route("/", methods=['GET'])
+@api.route("/", methods=['GET'])
 def products():
     """Landing page api."""
 
-    return "Api Products"#render_template("layout.html")
+    return "Api Products"
