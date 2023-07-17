@@ -3,6 +3,15 @@
 @use '../utils/animations';
 @use '../component/indicator';
 
+
+nav 
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .navigation
 {
     @include mixin.position_element(
